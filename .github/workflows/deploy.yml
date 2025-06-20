@@ -25,10 +25,7 @@ jobs:
         run: |
           echo "REACT_APP_FIREBASE_API_KEY: ${REACT_APP_FIREBASE_API_KEY}"
           echo "REACT_APP_FIREBASE_AUTH_DOMAIN: ${REACT_APP_FIREBASE_AUTH_DOMAIN}"
-          # Add echo for all your Firebase variables here to check them
-          # WARNING: This will print the values to the action logs.
-          # For sensitive data, use masking:
-          echo "::add-mask::${REACT_APP_FIREBASE_API_KEY}" # This will mask the value in logs
+          echo "::add-mask::${REACT_APP_FIREBASE_API_KEY}"
           echo "REACT_APP_FIREBASE_API_KEY (masked): ${REACT_APP_FIREBASE_API_KEY}"
         env:
           REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
