@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/SubSpace/static/css/main.5308def8.css",
-    "main.js": "/SubSpace/static/js/main.05cd3300.js",
+    "main.js": "/SubSpace/static/js/main.0be23c6e.js",
     "index.html": "/SubSpace/index.html",
     "main.5308def8.css.map": "/SubSpace/static/css/main.5308def8.css.map",
-    "main.05cd3300.js.map": "/SubSpace/static/js/main.05cd3300.js.map"
+    "main.0be23c6e.js.map": "/SubSpace/static/js/main.0be23c6e.js.map"
   },
   "entrypoints": [
     "static/css/main.5308def8.css",
-    "static/js/main.05cd3300.js"
+    "static/js/main.0be23c6e.js"
   ]
 }
