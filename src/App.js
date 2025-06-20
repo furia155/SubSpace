@@ -134,7 +134,7 @@ function App() {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src={process.env.PUBLIC_URL + "/subspace.png"}
+              src="/subspace.png"
               alt="Subspace Logo"
               height="40"
               className="d-inline-block align-top logo-glow"
