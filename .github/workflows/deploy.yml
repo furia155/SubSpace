@@ -21,6 +21,25 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug Environment Variables
+        run: |
+          echo "REACT_APP_FIREBASE_API_KEY: ${REACT_APP_FIREBASE_API_KEY}"
+          echo "REACT_APP_FIREBASE_AUTH_DOMAIN: ${REACT_APP_FIREBASE_AUTH_DOMAIN}"
+          # Add echo for all your Firebase variables here to check them
+          # WARNING: This will print the values to the action logs.
+          # For sensitive data, use masking:
+          echo "::add-mask::${REACT_APP_FIREBASE_API_KEY}" # This will mask the value in logs
+          echo "REACT_APP_FIREBASE_API_KEY (masked): ${REACT_APP_FIREBASE_API_KEY}"
+        env:
+          REACT_APP_FIREBASE_API_KEY: ${{ secrets.REACT_APP_FIREBASE_API_KEY }}
+          REACT_APP_FIREBASE_AUTH_DOMAIN: ${{ secrets.REACT_APP_FIREBASE_AUTH_DOMAIN }}
+          REACT_APP_FIREBASE_PROJECT_ID: ${{ secrets.REACT_APP_FIREBASE_PROJECT_ID }}
+          REACT_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.REACT_APP_FIREBASE_STORAGE_BUCKET }}
+          REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
+          REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
+          REACT_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}
+          PUBLIC_URL: ${{ github.event.repository.name }}
+
       - name: Build React App
         run: npm run build
         env:
@@ -31,6 +50,8 @@ jobs:
           REACT_APP_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_FIREBASE_MESSAGING_SENDER_ID }}
           REACT_APP_FIREBASE_APP_ID: ${{ secrets.REACT_APP_FIREBASE_APP_ID }}
           REACT_APP_FIREBASE_MEASUREMENT_ID: ${{ secrets.REACT_APP_FIREBASE_MEASUREMENT_ID }}
+          PUBLIC_URL: ${{ github.event.repository.name }}
+
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
