@@ -8,6 +8,7 @@ import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { getFirestore, collection, addDoc, query, where, onSnapshot, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
 import { useMemo } from 'react';
 
+const db = getFirestore();
 function App() {
 
   // Login/Register
@@ -21,7 +22,6 @@ function App() {
   const [user, setUser] = useState(null);
 
   // Subscription list
-  const db = getFirestore();
   const [subscriptions, setSubscriptions] = useState([]);
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
