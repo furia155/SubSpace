@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/SubSpace/static/css/main.5308def8.css",
-    "main.js": "/SubSpace/static/js/main.0be23c6e.js",
-    "index.html": "/SubSpace/index.html",
-    "main.5308def8.css.map": "/SubSpace/static/css/main.5308def8.css.map",
-    "main.0be23c6e.js.map": "/SubSpace/static/js/main.0be23c6e.js.map"
+    "main.css": "SubSpace/static/css/main.5308def8.css",
+    "main.js": "SubSpace/static/js/main.8d354229.js",
+    "index.html": "SubSpace/index.html",
+    "main.5308def8.css.map": "SubSpace/static/css/main.5308def8.css.map",
+    "main.8d354229.js.map": "SubSpace/static/js/main.8d354229.js.map"
   },
   "entrypoints": [
     "static/css/main.5308def8.css",
-    "static/js/main.0be23c6e.js"
+    "static/js/main.8d354229.js"
   ]
 }
