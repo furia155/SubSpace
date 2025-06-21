@@ -178,13 +178,13 @@ function App() {
           <Modal.Title>Select Your Platform</Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center">
-          <Button variant="outline-primary" className="m-2" href="/The Download.txt" download>
+          <Button variant="outline-primary" className="m-2" href={process.env.PUBLIC_URL + "/The Download.txt"} download>
             Windows
           </Button>
-          <Button variant="outline-success" className="m-2" href="/The Download.txt" download>
+          <Button variant="outline-success" className="m-2" href={process.env.PUBLIC_URL + "/The Download.txt"} download>
             Linux
           </Button>
-          <Button variant="outline-warning" className="m-2" href="/The Download.txt" download>
+          <Button variant="outline-warning" className="m-2" href={process.env.PUBLIC_URL + "/The Download.txt"} download>
             Android
           </Button>
         </Modal.Body>
