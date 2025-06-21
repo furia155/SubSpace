@@ -17,18 +17,7 @@ const firebaseConfig = {
   appId: process.env.REACT_APP_FIREBASE_APP_ID,
   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
-/*
-const firebaseConfig = {
-  apiKey: "AIzaSyAgPDj3RFhfsJQL9dYVM2W-mMRt1CDlFVo",
-  authDomain: "subspace-df18a.firebaseapp.com",
-  databaseURL: "https://subspace-df18a-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "subspace-df18a",
-  storageBucket: "subspace-df18a.firebasestorage.app",
-  messagingSenderId: "710578344636",
-  appId: "1:710578344636:web:b75b39deb2e58d0bb4f6b9",
-  measurementId: "G-E1NJ4G6D5H"
-};
-*/
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 export const db = getFirestore(app);
