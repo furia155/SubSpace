@@ -1,1 +1,1 @@
-SubSpace - A basic subscription management tool
+SubSpace - A subscription management tool
