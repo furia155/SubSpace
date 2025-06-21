@@ -55,7 +55,7 @@ function App() {
     });
 
     return () => unsubscribe();
-  }, [user])
+  }, [user, db])
 
   const addSubscription = async (e) => {
     e.preventDefault();
