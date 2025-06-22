@@ -259,7 +259,7 @@ function App() {
                       <div>
                         <Card.Title>{sub.name}</Card.Title>
                         <Card.Text>Price: ${sub.price.toFixed(2)}</Card.Text>
-                        <Card.Text>Due Date: {sub.date}</Card.Text>
+                        <Card.Text>Date: {sub.date}</Card.Text>
                       </div>
                       <Button variant="danger" size="sm" onClick={() => removeSubscription(sub.id)}>Remove</Button>
                     </Card.Body>
